@@ -1,0 +1,22 @@
+name: wtfutil
+version: v0.23.0
+summary: "Terminal-based dashboard designed for displaying important, daily data."
+description: |
+  WTF is a personal information dashboard for your terminal, developed for those who spend most of their day in the command line.
+  
+  It allows you to monitor systems, services, and important information that you otherwise might keep browser tabs open for, the kinds of things you don’t always need visible, but do check in on every now and then.
+
+  wtfutil is made by Chris Cummer and an entire open source community. This snap is packaged by Ricardo N Feliciano (FelicianoTech) using the `wtfutil` source code available on GitHub.
+grade: stable
+confinement: classic
+icon: icon.png
+base: core18
+
+parts:
+  wtfutil:
+    plugin: dump
+    source: https://github.com/wtfutil/wtf/releases/download/v0.23.0/wtf_0.23.0_linux_amd64.tar.gz
+
+apps:
+  wtfutil:
+    command: wtfutil
